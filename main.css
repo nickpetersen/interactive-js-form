@@ -11,7 +11,7 @@ label {
 	color: rgb(138, 138, 138);
 }
 
-/* .bg-overlay {
+.bg-overlay {
 	background-color: rgba(0, 0, 0, .2);
 	position: absolute;
 	height: 100vh;
@@ -19,14 +19,13 @@ label {
 	top: 0;
 	left: 0;
 	z-index: 51;
-} */
+}
 
 .bg {
-	background-color: lightgrey;
-	/* background-image: url('img/bg.png');
+	background-image: url('img/bg.png');
 	background-position: center;
 	background-size: cover;
-	background-repeat: no-repeat; */
+	background-repeat: no-repeat;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -43,11 +42,10 @@ label {
 .logo {
 	width: 200px;
 	height: 50px;
-	background-color: lightgrey;
-	/* background-image: url('img/logo.jpeg');
+	background-image: url('img/logo.jpeg');
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center; */
+	background-position: center;
 	margin-bottom: 40px;
 }
 
