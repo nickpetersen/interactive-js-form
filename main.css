@@ -1,0 +1,177 @@
+/* custom font
+@import url(import url here); 
+*/
+
+h1, h2, h3, h4, h5, h6, p, a, label, input, select, textarea {
+	font-family: 'Open Sans', sans-serif;
+	color: #333;
+}
+
+label {
+	color: rgb(138, 138, 138);
+}
+
+/* .bg-overlay {
+	background-color: rgba(0, 0, 0, .2);
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	z-index: 51;
+} */
+
+.bg {
+	background-color: lightgrey;
+	/* background-image: url('img/bg.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat; */
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+}
+
+.logo-wrap {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.logo {
+	width: 200px;
+	height: 50px;
+	background-color: lightgrey;
+	/* background-image: url('img/logo.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center; */
+	margin-bottom: 40px;
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+/* Multi-Step Form */
+* {
+	box-sizing: border-box;
+}
+
+#regForm {
+	z-index: 100;
+	border-radius: 10px;
+	background-color: #fff;
+	font-family: '';
+	padding: 40px;
+	max-width: 650px;
+	min-width: 650px;
+	max-height: 800px;
+	overflow: auto;
+	box-shadow: 0px 3px 15px rgba(0,0,0,0.3);
+}
+
+h2 {
+	text-align: center;
+	padding-bottom: 15px;
+	font-size: 20px;
+}
+
+input {
+	padding: 10px;
+	width: 100%;
+	font-size: 17px;
+	border: 1px solid #aaaaaa;
+	border-radius: 5px;
+}
+
+.radio-input {
+	display: none;
+}
+
+/* Mark input boxes that get errors during validation: */
+input.invalid {
+	background-color: #ffdddd;
+}
+
+.step.active {
+	opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+	background-color: rgb(216, 180, 81);
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+	border: 1px solid rgb(112, 172, 212);
+	color: rgb(112, 172, 212);
+	background-color: white;
+}
+
+/* Hide all steps by default: */
+.tab {
+	display: none;
+}
+
+button {
+	background-color: rgb(216, 180, 81);
+	margin-top: 10px;
+	color: #ffffff;
+	border: none;
+	padding: 10px 20px;
+	font-size: 17px;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+#prevBtn {
+	background-color: #bbbbbb;
+}
+
+/* Step marker: Place in the form. */
+.step {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbbbbb;
+	border: none;  
+	border-radius: 50%;
+	display: inline-block;
+	opacity: 0.5;
+}
+
+.btn-primary {
+	color: #333;
+	background-color: white;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.btn-primary:hover {
+	border: 1px solid rgb(112, 172, 212);
+	color: rgb(112, 172, 212);
+	background-color: white;
+}
+
+.btn-group {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.tab-question {
+	text-align: center;
+}
