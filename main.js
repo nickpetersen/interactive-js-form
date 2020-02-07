@@ -1,3 +1,9 @@
+window.onload = function fadeForm() {
+  var form = document.getElementById('regForm');
+
+  form.style.opacity = 1;
+}
+
 $(document).ready(function() {	
 	
 	// Random Alert shown for the fun of it
