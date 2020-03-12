@@ -13,6 +13,8 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="main.css">
+		<!-- Data Object -->
+		<script type="text/javascript" src="data.js"></script>
 	</head>
 	<body>
 
@@ -22,7 +24,7 @@
 				<div class="logo-wrap">
 					<div class="logo"></div>
 				</div>
-				<!-- One "tab" for each step in the form: -->
+				<!-- Personal Info -->
 				<div class="tab">
 					<h2>Please provide some personal information.</h2>
 					<div class="form-group">
@@ -48,35 +50,36 @@
 						<input type="email" oninput="this.className = ''" name="email">
 					</div>
 				</div>
+				<!-- Path Select -->
 				<div class="tab">
 					<p class="tab-question">How will you use the home you are building?</p>
 					<div class="btn-group" data-toggle="buttons">
-						<label class="btn btn-primary path-selector" id="primaryResidence">
+						<label class="btn btn-primary js-path-selector" id="primaryResidence">
 							<input class="radio-input" type="radio" name="options"> Primary Residence
 						</label>
-						<label class="btn btn-primary path-selector" id="secondVacationHome">
+						<label class="btn btn-primary js-path-selector" id="secondVacationHome">
 							<input class="radio-input" type="radio" name="options"> 2nd Vacation Home
 						</label>
-						<label class="btn btn-primary path-selector" id="investmentProperty">
+						<label class="btn btn-primary js-path-selector" id="investmentProperty">
 							<input class="radio-input" type="radio" name="options"> Investment Property
 						</label>
 					</div>
 				</div>
 				<div id="primaryResidencePath" style="display: none;">
 					<div class="primary-residence-child">
-						<p class="tab-question">Do you currently own your Primary Residence</p>
-						<div class="btn-group" data-toggle="buttons" style="text-align: center;">
-							<label class="btn btn-primary">
+						<p class="tab-question">Do you currently own your Primary Residence?</p>
+						<div class="btn-group js-path-trigger" data-toggle="buttons" style="text-align: center;">
+							<label id="pr1a" class="btn btn-primary js-path-answer">
 								<input class="radio-input" type="radio" name="options"> Yes
 							</label>
-							<label class="btn btn-primary">
+							<label id="pr1b" class="btn btn-primary js-path-answer">
 								<input class="radio-input" type="radio" name="options"> No
 							</label>
 						</div>
 					</div>
-					<div class="primary-residence-child">
+					<div id="pr1b" class="primary-residence-child">
 						<p class="tab-question">Do you intend to sell your Primary Residence prior to the purchase of your new Primary Residence?</p>
-						<div class="btn-group" data-toggle="buttons" style="text-align: center;">
+						<div class="btn-group js-path-trigger" data-toggle="buttons" style="text-align: center;">
 							<label class="btn btn-primary">
 								<input class="radio-input" type="radio" name="options"> Yes
 							</label>
@@ -87,7 +90,7 @@
 					</div>
 					<div class="primary-residence-child">
 						<p class="tab-question">Do you intend to build your new home on privately owned land or on land you will lease/rent?</p>
-						<div class="btn-group" data-toggle="buttons" style="text-align: center;">
+						<div class="btn-group js-path-trigger" data-toggle="buttons" style="text-align: center;">
 							<label class="btn btn-primary">
 								<input class="radio-input" type="radio" name="options"> Privately Owned
 							</label>
@@ -274,15 +277,18 @@
 							</div>
 						</div>
 					</div class="primary-residence-child">
+					</div>
 				</div>
 				<div id="secondVacationHomePath" style="display: none;">
 					<div class="second-vacation-home-child">Second Vacation Home</div>
 					<div class="second-vacation-home-child">Second Vacation Home</div>
 				</div>
 				<div id="investmentPropertyPath" style="display: none;">
-					<div class="investment-property-child">Investment Property</div>
-					<div class="investment-property-child">Investment Property</div>
+					<div class="investment-property-child">
+						<h2>Unfortunately LHFS cannot finance manufactured homes for investment property purposes.</h2>
+					</div>
 				</div>
+				<!-- Next or Previous Buttons -->
 				<div style="overflow:auto;">
 					<div style="display: flex; justify-content: center; align-items: center;">
 						<button style="margin: 5px;" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
@@ -304,6 +310,6 @@
 			<div class="bg-overlay"></div>
 			<div class="bg"></div>
 		</main> <!-- /content -->
-		<script src="main.js"></script>
+		<script type="text/javascript" src="main.js"></script>
 	</body>
 </html>
